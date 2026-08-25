@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Happy Birthday Cutuuu ❤️</title>
+<style>
+*{box-sizing:border-box}html,body{margin:0;background:#10051b;color:#fff;font-family:Georgia,serif}
+body{overflow:hidden}.screen{position:fixed;inset:0;display:none;align-items:center;justify-content:center;text-align:center;padding:20px;background:radial-gradient(circle at 50% 18%,#bd42b6,#511b77 38%,#10051b 100%)}.screen.active{display:flex}
+.inner{width:min(94vw,900px)}h1{font-size:clamp(44px,12vw,105px);line-height:.95;margin:15px 0;text-shadow:0 0 35px #ff78d8}h2{font-size:clamp(32px,8vw,70px)}.sub{font-size:clamp(17px,4vw,27px);letter-spacing:2px}.tiny{opacity:.8}.btn{border:0;border-radius:999px;padding:17px 27px;font-weight:700;font-size:18px;color:#651a5e;background:#ffd5f2;box-shadow:0 0 35px #ff77df;cursor:pointer;margin:12px}.ribbon{font-size:clamp(28px,8vw,65px);padding:20px;margin:20px auto;background:#d873b4;max-width:750px}.count{font-size:clamp(100px,25vw,230px);font-weight:900}.cake{font-size:130px;animation:p 1s infinite alternate}@keyframes p{to{transform:scale(1.06)}}.flame{font-size:55px}.burst{position:absolute;inset:0;pointer-events:none;overflow:hidden}.conf{position:absolute;width:9px;height:17px;animation:fall 3s linear infinite}@keyframes fall{to{transform:translateY(115vh) rotate(720deg)}}.balloon{position:absolute;width:42px;height:57px;border-radius:50%;animation:float 4s ease-in-out infinite}.balloon:after{content:"";position:absolute;left:20px;top:53px;height:100px;border-left:1px solid #fff8}@keyframes float{50%{transform:translateY(-35px)}}.album{height:75vh;display:flex;align-items:center;justify-content:center;overflow:hidden}.album img{width:min(78vw,430px);height:70vh;object-fit:cover;border-radius:25px;box-shadow:0 0 35px #ff78d8;animation:photoIn 1s ease}@keyframes photoIn{from{transform:scale(.85);opacity:0}to{transform:scale(1);opacity:1}}.message{max-height:76vh;overflow:auto;text-align:left;padding:25px;border-radius:25px;background:#ffffff12;border:1px solid #ffffff25;line-height:1.75;font-size:18px}.shayari{font-size:clamp(24px,6vw,49px);line-height:1.55}.angel{font-size:clamp(100px,28vw,230px);animation:drop 1s}@keyframes drop{from{transform:translateY(-100vh)}to{transform:none}}
+</style>
+</head>
+<body>
+
+<section id="s0" class="screen active"><div class="inner"><div class="sub">WAIT...</div><h1>MY CUTUUU ❤️</h1><p class="tiny">just a little surprise...</p></div></section>
+<section id="s1" class="screen"><div class="inner"><div class="ribbon">🎀 FOR MY CUTUUU 🎀</div><button class="btn" id="open">OPEN YOUR SURPRISE 🎁</button></div></section>
+<section id="s2" class="screen"><div class="inner"><div class="sub">GET READY...</div><div id="count" class="count">3</div></div></section>
+<section id="s3" class="screen"><div class="burst" id="b1"></div><div class="inner"><h1>HAPPY<br>BIRTHDAY<br>CUTUUU ❤️</h1><p class="sub">Today is all about you ✨</p></div></section>
+<section id="s4" class="screen"><div class="inner"><div class="cake">🎂</div><div id="flame" class="flame">🔥</div><h2>Ye cake aapke liye ❤️</h2><button class="btn" id="blow">💨 BLOW THE CANDLE</button></div></section>
+<section id="s5" class="screen"><div class="inner"><h2>Our Little Album 📸</h2><div class="album"><img id="pic" alt="memory"></div><p id="pcap">A little memory ❤️</p></div></section>
+<section id="s6" class="screen"><div class="inner"><h2>Special Things About You ✨</h2><div class="message" id="special"></div></div></section>
+<section id="s7" class="screen"><div class="inner"><div class="sub">THREE LITTLE SHAYARIS ❤️</div><div id="sh" class="shayari"></div></div></section>
+<section id="s8" class="screen"><div class="inner"><h2>Mera Message ❤️</h2><div id="long" class="message"></div></div></section>
+<section id="s9" class="screen"><div class="inner"><h1>MAKE A WISH ✨</h1><p>Eyes closed. Dil se wish mango. ❤️</p><button class="btn" id="wish">✨ MAKE MY WISH</button></div></section>
+<section id="s10" class="screen"><div class="inner"><div class="angel">👼</div><h2>“Mango bachha… kya manga hai?”</h2><button class="btn" id="done">💥 DONE</button></div></section>
+<section id="s11" class="screen"><div class="burst" id="b2"></div><div class="inner"><h1>HAPPY BIRTHDAY<br>BEGUMMM JI ❤️🎂</h1><p class="sub">Ye chhota sa birthday wish aapke shoher ki side se ❤️</p></div></section>
+
+<script>
+const S=[...document.querySelectorAll('.screen')];let timers=[];
+function show(n){timers.forEach(clearTimeout);timers=[];S.forEach((x,i)=>x.classList.toggle('active',i===n));}
+const wait=ms=>new Promise(r=>{let t=setTimeout(r,ms);timers.push(t)});
+function fx(id,n=90){let b=document.getElementById(id);b.innerHTML='';for(let i=0;i<n;i++){let x=document.createElement('i');x.className='conf';x.style.left=Math.random()*100+'%';x.style.top=(-Math.random()*50)+'vh';x.style.animationDelay=(Math.random()*1.5)+'s';x.style.background=['#ffd166','#ff70b8','#b98cff','#80ddff','#fff'][i%5];b.appendChild(x)}for(let i=0;i<10;i++){let x=document.createElement('i');x.className='balloon';x.style.left=Math.random()*94+'%';x.style.top=(45+Math.random()*40)+'%';x.style.background=['#ff70b8','#a875ff','#75dfff','#ffd166'][i%4];b.appendChild(x)}}
+setTimeout(()=>show(1),2500);
+
+document.getElementById('open').onclick=async()=>{
+ show(2);
+ for(let n=3;n>=1;n--){document.getElementById('count').textContent=n;await wait(1000)}
+ show(3);fx('b1',120);await wait(5000);show(4)
+};
+document.getElementById('blow').onclick=async()=>{
+ document.getElementById('flame').textContent='🕯️';await wait(900);show(5);startAlbum()
+};
+const photos=['photo1.jpg','photo2.jpg','photo3.jpg','photo4.jpg','photo5.jpg','photo6.jpg','photo7.jpg','photo8.jpg'];
+const caps=['My cutuuu ❤️','That smile ✨','Simply beautiful','A memory worth keeping','One of my favourite views ❤️','Little moment, big memory','Just you, being you','Forever special ✨'];
+function startAlbum(){let i=0;function next(){if(i>=photos.length){setTimeout(()=>startSpecial(),800);return}let im=new Image();im.onload=()=>{document.getElementById('pic').src=im.src;document.getElementById('pcap').textContent=caps[i]||'A little memory ❤️';i++;setTimeout(next,2200)};im.onerror=()=>{i++;next()};im.src=photos[i]}next()}
+function startSpecial(){show(6);document.getElementById('special').textContent=`Aapki smile 😊 — bina reason ke bhi mood better kar deti hai.
+
+Aapki chhoti-chhoti aadatein ❤️ — wahi cheezein hain jo sabse zyada yaad reh jaati hain.
+
+Aapka care karna 🫶🏻 — simple hota hai, lekin bahut special feel hota hai.
+
+Aapka gussa 😂 — thoda dangerous, lekin cute bhi.
+
+Aapki baatein 💬 — random conversation ko bhi memorable bana deti hain.
+
+Aapki presence ✨ — kabhi-kabhi bas kisi ka hona hi kaafi hota hai.
+
+Aur sabse important — aap jaisi hain, waise hi special hain. ❤️`;setTimeout(startShayari,8000)}
+const shayaris=[
+'“Na chaand ki khwahish hai, na sitaaron ki farmaish hai,<br>bas aap hamesha muskuraati rahein — meri itni si guzarish hai.” ❤️',
+'“Kuch log kahaniyon mein milte hain,<br>kuch log khwaabon mein milte hain,<br>aap unmein se hain Begumm ji,<br>jo kismat se milte hain.” ✨',
+'“Teri khushi se roshan rahe har ek savera,<br>teri muskaan se khoobsurat ho har shaam,<br>jo maanga ho dil ne, woh sab tujhe mile,<br>aur har dua mein ho tera hi naam.” ❤️'
+];
+async function startShayari(){show(7);for(const s of shayaris){document.getElementById('sh').innerHTML=s;await wait(4000)}show(8)}
+document.getElementById('long').innerHTML=`<b>Happy Birthday, Begumm ji ❤️🎂✨</b><br><br>
+Aaj ka din mere liye sirf ek normal date nahi hai. Aaj woh din hai jis din duniya ko aap mili thi… aur meri zindagi ko bhi ek aisi wajah mili jiske liye dil thoda aur feel karna seekhe. ❤️<br><br>
+I genuinely hope ki aapki life ka ye naya chapter utni hi khoobsurat khushiyan lekar aaye jitni khoobsurti aap apne aas-paas ke logon ki life mein laati hain.<br><br>
+Kabhi-kabhi kuch log bas “log” banke nahi aate. Dheere-dheere aadat ban jaate hain, phir sukoon, phir smile ka reason. Aap mere liye kuch aisi hi hain.<br><br>
+Aapki feelings important hain. Aapke dreams important hain. Aapki happiness important hai. Aur aap khud bhi bahut important hain. ❤️<br><br>
+I wish aapko life mein woh sab mile jiske liye aapne kabhi chup-chaap dua maangi ho. Aapke dreams reality banein, aapko genuine log milein, aur aapka dil hamesha sukoon mein rahe.<br><br>
+May Allah bless you with happiness, peace, success and countless beautiful moments. May every genuine dua you make find its way to you. 🤲🏻❤️<br><br>
+Bas ek wish: khush rehna. Seriously. Jitna ho sake, khush rehna. ❤️<br><br>
+<b>Happy Birthday once again, meri special si Begumm ji. ❤️🎂✨</b>`;
+document.getElementById('wish').onclick=()=>{show(10);setTimeout(()=>{try{let u=new SpeechSynthesisUtterance('Mango bachha... kya manga hai?');u.rate=.7;u.pitch=.55;speechSynthesis.speak(u)}catch(e){}},700)};
+document.getElementById('done').onclick=()=>{show(11);fx('b2',160)};
+</script>
+</body></html>
